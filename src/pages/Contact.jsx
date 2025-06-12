@@ -1,15 +1,14 @@
 import React from 'react'
-import { useParams } from "react-router";
-import { useNavigate } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+
+
+import { Link } from "react-router-dom";
 const Contact = () => {
-  let params = useParams();
-  console.log(params);
-  const navigate = useNavigate();
   return (
     <div style={{color:"white"}}>
-      Contact Page Param = {params.id}
-      <button onClick={()=>navigate("/")}>GO TO HOME</button>
-
+      <Link to="/contact/100">TAlk to person1</Link>
+      <br />
+      <Outlet/>
     </div>
   )
 }

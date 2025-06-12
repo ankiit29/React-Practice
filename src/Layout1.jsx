@@ -5,14 +5,17 @@ import Home from './pages/Home'
 import Header from './pages/Header'
 import Footer from './pages/Footer'
 import About from './pages/About'
-const Layout = () => {
+import Person1 from './pages/Person1'
+const Layout1 = () => {
   return (
     
     <BrowserRouter>
     <Header/>
     <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/contact/:id' element={<Contact/>}/>
+       <Route path='/contact' element={<Contact/>}>
+          <Route path=':id' element={<Person1/>}/>
+       </Route>
         <Route path='/about' element={<About/>}/>
     </Routes>
     <Footer/>
@@ -20,4 +23,4 @@ const Layout = () => {
   )
 }
 
-export default Layout
+export default Layout1
